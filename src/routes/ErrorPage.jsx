@@ -1,6 +1,6 @@
 import { Link, useNavigate, useRouteError } from "react-router-dom";
 
-function ErrorPage() {
+function Error() {
   const error = useRouteError();
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ function ErrorPage() {
           <div className="flex justify-center gap-4">
             <button className="btn" onClick={() => navigate(-1)}>
               <svg
-                className="h-8 w-8 fill-current"
+                className="h-6 w-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -25,7 +25,7 @@ function ErrorPage() {
             </button>
             <Link to="/" className="btn">
               <svg
-                className="h-8 w-8 fill-current"
+                className="h-6 w-6 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -40,4 +40,4 @@ function ErrorPage() {
   );
 }
 
-export default ErrorPage;
+export default Error;
