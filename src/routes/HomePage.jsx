@@ -1,18 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-export async function homeLoader() {
-  console.log("homeLoader");
-  return null;
-}
+import Game from "../components/Game";
 
 function HomePage() {
   return (
     <div className="flex h-screen flex-col items-center justify-between text-center">
       <Navbar />
 
-      <main>
-        <h1 className="text-3xl font-bold underline">.</h1>
+      <main className="grid max-w-full lg:max-w-[80%]">
+        <Game />
       </main>
 
       <Footer />

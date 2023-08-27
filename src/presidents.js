@@ -1,12 +1,11 @@
-const presidents = [
+export const presidents = [
   {
     id: 1,
     ordinal: 1,
     name: "George Washington",
     yearsInOffice: "1789-1797",
     vicePresidents: ["John Adams"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/220px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+    photo: "/presidents/1.png",
   },
   {
     id: 2,
@@ -14,8 +13,7 @@ const presidents = [
     name: "John Adams",
     yearsInOffice: "1797-1801",
     vicePresidents: ["Thomas Jefferson"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/John_Adams%2C_Gilbert_Stuart%2C_c1800_1815.jpg/220px-John_Adams%2C_Gilbert_Stuart%2C_c1800_1815.jpg",
+    photo: "/presidents/2.png",
   },
   {
     id: 3,
@@ -23,8 +21,7 @@ const presidents = [
     name: "Thomas Jefferson",
     yearsInOffice: "1801-1809",
     vicePresidents: ["Aaron Burr", "George Clinton"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29%28cropped%29.jpg/220px-Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29%28cropped%29.jpg",
+    photo: "/presidents/3.png",
   },
   {
     id: 4,
@@ -32,8 +29,7 @@ const presidents = [
     name: "James Madison",
     yearsInOffice: "1809-1817",
     vicePresidents: ["George Clinton", "Elbridge Gerry"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/James_Madison%28cropped%29%28c%29.jpg/220px-James_Madison%28cropped%29%28c%29.jpg",
+    photo: "/presidents/4.png",
   },
   {
     id: 5,
@@ -41,8 +37,7 @@ const presidents = [
     name: "James Monroe",
     yearsInOffice: "1817-1825",
     vicePresidents: ["Daniel D. Tompkins"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/James_Monroe_White_House_portrait_1819.jpg/220px-James_Monroe_White_House_portrait_1819.jpg",
+    photo: "/presidents/5.png",
   },
   {
     id: 6,
@@ -50,8 +45,7 @@ const presidents = [
     name: "John Quincy Adams",
     yearsInOffice: "1825-1829",
     vicePresidents: ["John C. Calhoun"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/JQA_Photo.tif_%28cropped%29.jpg/220px-JQA_Photo.tif_%28cropped%29.jpg",
+    photo: "/presidents/6.png",
   },
   {
     id: 7,
@@ -59,8 +53,7 @@ const presidents = [
     name: "Andrew Jackson",
     yearsInOffice: "1829-1837",
     vicePresidents: ["John C. Calhoun", "Martin Van Buren"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Andrew_jackson_headFXD.jpg/220px-Andrew_jackson_headFXD.jpg",
+    photo: "/presidents/7.png",
   },
   {
     id: 8,
@@ -68,8 +61,7 @@ const presidents = [
     name: "Martin Van Buren",
     yearsInOffice: "1837-1841",
     vicePresidents: ["Richard Mentor Johnson"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Martin_Van_Buren_by_Mathew_Brady_c1855-58.jpg/220px-Martin_Van_Buren_by_Mathew_Brady_c1855-58.jpg",
+    photo: "/presidents/8.png",
   },
   {
     id: 9,
@@ -77,8 +69,7 @@ const presidents = [
     name: "William Henry Harrison",
     yearsInOffice: "1841",
     vicePresidents: ["John Tyler"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/William_Henry_Harrison_daguerreotype_edit.jpg/220px-William_Henry_Harrison_daguerreotype_edit.jpg",
+    photo: "/presidents/9.png",
   },
   {
     id: 10,
@@ -86,8 +77,7 @@ const presidents = [
     name: "John Tyler",
     yearsInOffice: "1841-1845",
     vicePresidents: ["None"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Tyler_Daguerreotype_%28restoration%29.jpg/220px-Tyler_Daguerreotype_%28restoration%29.jpg",
+    photo: "/presidents/10.png",
   },
   {
     id: 11,
@@ -95,8 +85,7 @@ const presidents = [
     name: "James K. Polk",
     yearsInOffice: "1845-1849",
     vicePresidents: ["George M. Dallas"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/James_Polk_restored.jpg/220px-James_Polk_restored.jpg",
+    photo: "/presidents/11.png",
   },
   {
     id: 12,
@@ -104,8 +93,7 @@ const presidents = [
     name: "Zacary Taylor",
     yearsInOffice: "1849-1850",
     vicePresidents: ["Millard Fillmore"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Zachary_Taylor_restored_and_cropped.jpg/220px-Zachary_Taylor_restored_and_cropped.jpg",
+    photo: "/presidents/12.png",
   },
   {
     id: 13,
@@ -113,8 +101,7 @@ const presidents = [
     name: "Millard Fillmore",
     yearsInOffice: "1850-1853",
     vicePresidents: ["None"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Millard_Fillmore.jpg/220px-Millard_Fillmore.jpg",
+    photo: "/presidents/13.png",
   },
   {
     id: 14,
@@ -122,8 +109,7 @@ const presidents = [
     name: "Franklin Pierce",
     yearsInOffice: "1853-1857",
     vicePresidents: ["William R. King"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg/220px-Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg",
+    photo: "/presidents/14.png",
   },
   {
     id: 15,
@@ -131,8 +117,7 @@ const presidents = [
     name: "James Buchanan",
     yearsInOffice: "1857-1861",
     vicePresidents: ["John C. Breckinridge"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/James_Buchanan.jpg/220px-James_Buchanan.jpg",
+    photo: "/presidents/15.png",
   },
   {
     id: 16,
@@ -140,8 +125,7 @@ const presidents = [
     name: "Abraham Lincoln",
     yearsInOffice: "1861-1865",
     vicePresidents: ["Hannibal Hamlin", "Andrew John"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/220px-Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+    photo: "/presidents/16.png",
   },
   {
     id: 17,
@@ -149,8 +133,7 @@ const presidents = [
     name: "Andrew Johnson",
     yearsInOffice: "1865-1869",
     vicePresidents: ["None"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/President_Andrew_Johnson.jpg/220px-President_Andrew_Johnson.jpg",
+    photo: "/presidents/17.png",
   },
   {
     id: 18,
@@ -158,8 +141,7 @@ const presidents = [
     name: "Ulysses S. Grant",
     yearsInOffice: "1869-1877",
     vicePresidents: ["Schuyler Colfax", "Henry Wilson"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ulysses_S._Grant_1870-1880.jpg/220px-Ulysses_S._Grant_1870-1880.jpg",
+    photo: "/presidents/18.png",
   },
   {
     id: 19,
@@ -167,8 +149,7 @@ const presidents = [
     name: "Rutherford B. Hayes",
     yearsInOffice: "1877-1881",
     vicePresidents: ["William A. Wheeler"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg/220px-President_Rutherford_Hayes_1870_-_1880_Restored.jpg",
+    photo: "/presidents/19.png",
   },
   {
     id: 20,
@@ -176,8 +157,7 @@ const presidents = [
     name: "James A. Garfield",
     yearsInOffice: "1881",
     vicePresidents: ["Chester A. Arthur"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg/220px-James_Abram_Garfield%2C_photo_portrait_seated.jpg",
+    photo: "/presidents/20.png",
   },
   {
     id: 21,
@@ -185,8 +165,7 @@ const presidents = [
     name: "Chester A. Arthur",
     yearsInOffice: "1881-1885",
     vicePresidents: ["None"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chester_Alan_Arthur.jpg/220px-Chester_Alan_Arthur.jpg",
+    photo: "/presidents/21.png",
   },
   {
     id: 22,
@@ -194,8 +173,7 @@ const presidents = [
     name: "Grover Cleveland",
     yearsInOffice: "1893-1897",
     vicePresidents: ["Adlai Stevenson I"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg/220px-Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg",
+    photo: "/presidents/22.png",
   },
   {
     id: 23,
@@ -203,8 +181,7 @@ const presidents = [
     name: "Benjamin Harrison",
     yearsInOffice: "1889-1893",
     vicePresidents: ["Levi P. Morton"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pach_Brothers_-_Benjamin_Harrison.jpg/220px-Pach_Brothers_-_Benjamin_Harrison.jpg",
+    photo: "/presidents/23.png",
   },
   {
     id: 24,
@@ -212,8 +189,7 @@ const presidents = [
     name: "Grover Cleveland",
     yearsInOffice: "1893-1897",
     vicePresidents: ["Adlai Stevenson I"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg/220px-Grover_Cleveland_-_NARA_-_518139_%28cropped%29.jpg",
+    photo: "/presidents/24.png",
   },
   {
     id: 25,
@@ -221,8 +197,7 @@ const presidents = [
     name: "William McKinley",
     yearsInOffice: "1897-1901",
     vicePresidents: ["Garret Hobart", "Theodore Roosevelt"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mckinley.jpg/220px-Mckinley.jpg",
+    photo: "/presidents/25.png",
   },
   {
     id: 26,
@@ -230,8 +205,7 @@ const presidents = [
     name: "Theodore Roosevelt",
     yearsInOffice: "1901-1909",
     vicePresidents: ["Charles W. Fairbanks"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/President_Roosevelt_-_Pach_Bros.jpg/220px-President_Roosevelt_-_Pach_Bros.jpg",
+    photo: "/presidents/26.png",
   },
   {
     id: 27,
@@ -239,8 +213,7 @@ const presidents = [
     name: "William Howard Taft",
     yearsInOffice: "1909-1913",
     vicePresidents: ["James S. Sherman"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/William_Howard_Taft_cph.3b35813.jpg/220px-William_Howard_Taft_cph.3b35813.jpg",
+    photo: "/presidents/27.png",
   },
   {
     id: 28,
@@ -248,8 +221,7 @@ const presidents = [
     name: "Woodrow Wilson",
     yearsInOffice: "1913-1921",
     vicePresidents: ["Thomas R. Marshall"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/President_Wilson_1919-bw.tif/lossless-page1-220px-President_Wilson_1919-bw.tif.png",
+    photo: "/presidents/28.png",
   },
   {
     id: 29,
@@ -257,8 +229,7 @@ const presidents = [
     name: "Warren G. Harding",
     yearsInOffice: "1921-1923",
     vicePresidents: ["Calvin Coolidge"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Warren_G_Harding-Harris_%26_Ewing.jpg/220px-Warren_G_Harding-Harris_%26_Ewing.jpg",
+    photo: "/presidents/29.png",
   },
   {
     id: 30,
@@ -266,8 +237,7 @@ const presidents = [
     name: "Calvin Coolidge",
     yearsInOffice: "1923-1925",
     vicePresidents: ["Charles G. Dawes"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Calvin_Coolidge%2C_bw_head_and_shoulders_photo_portrait_seated%2C_1919.jpg/220px-Calvin_Coolidge%2C_bw_head_and_shoulders_photo_portrait_seated%2C_1919.jpg",
+    photo: "/presidents/30.png",
   },
   {
     id: 31,
@@ -275,8 +245,7 @@ const presidents = [
     name: "Herbert Hoover",
     yearsInOffice: "1929-1933",
     vicePresidents: ["Charles Curtis"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/President_Hoover_portrait.jpg/220px-President_Hoover_portrait.jpg",
+    photo: "/presidents/31.png",
   },
   {
     id: 32,
@@ -284,8 +253,7 @@ const presidents = [
     name: "Franklin D. Roosevelt",
     yearsInOffice: "1933-1945",
     vicePresidents: ["John N. Garner", "Henry A. Wallace", "Harry S. Truman"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/FDR_1944_Color_Portrait.jpg/220px-FDR_1944_Color_Portrait.jpg",
+    photo: "/presidents/32.png",
   },
   {
     id: 33,
@@ -293,8 +261,7 @@ const presidents = [
     name: "Harry S. Truman",
     yearsInOffice: "1945-1953",
     vicePresidents: ["Alben W. Barkley"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Harry_S_Truman%2C_bw_half-length_photo_portrait%2C_facing_front%2C_1945-crop.jpg/220px-Harry_S_Truman%2C_bw_half-length_photo_portrait%2C_facing_front%2C_1945-crop.jpg",
+    photo: "/presidents/33.png",
   },
   {
     id: 34,
@@ -302,8 +269,7 @@ const presidents = [
     name: "Dwight D. Eisenhower",
     yearsInOffice: "1953-1961",
     vicePresidents: ["Richard Nixon"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg/220px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg",
+    photo: "/presidents/34.png",
   },
   {
     id: 35,
@@ -311,8 +277,7 @@ const presidents = [
     name: "John F. Kennedy",
     yearsInOffice: "1961-1963",
     vicePresidents: ["Lyndon B. Johnson"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/John_F._Kennedy%2C_White_House_photo_portrait%2C_looking_up.jpg/220px-John_F._Kennedy%2C_White_House_photo_portrait%2C_looking_up.jpg",
+    photo: "/presidents/35.png",
   },
   {
     id: 36,
@@ -320,8 +285,7 @@ const presidents = [
     name: "Lyndon B. Johnson",
     yearsInOffice: "1963-1969",
     vicePresidents: ["Hubert Humphrey"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/37_Lyndon_Johnson_3x4.jpg/220px-37_Lyndon_Johnson_3x4.jpg",
+    photo: "/presidents/36.png",
   },
   {
     id: 37,
@@ -329,8 +293,7 @@ const presidents = [
     name: "Richard Nixon",
     yearsInOffice: "1969-1974",
     vicePresidents: ["Spiro Agnew", "Gerald Ford"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg/220px-Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg",
+    photo: "/presidents/37.png",
   },
   {
     id: 38,
@@ -338,8 +301,7 @@ const presidents = [
     name: "Gerald Ford",
     yearsInOffice: "1974-1977",
     vicePresidents: ["Nelson Rockefeller"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Gerald_Ford%28cropped%29.jpg/220px-Gerald_Ford%28cropped%29.jpg",
+    photo: "/presidents/38.png",
   },
   {
     id: 39,
@@ -347,8 +309,7 @@ const presidents = [
     name: "Jimmy Carter",
     yearsInOffice: "1977-1981",
     vicePresidents: ["Walter Mondale"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/JimmyCarterPortrait2.jpg/220px-JimmyCarterPortrait2.jpg",
+    photo: "/presidents/39.png",
   },
   {
     id: 40,
@@ -356,8 +317,7 @@ const presidents = [
     name: "Ronald Reagan",
     yearsInOffice: "1981-1989",
     vicePresidents: ["George H.W. Bush"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/220px-Official_Portrait_of_President_Reagan_1981.jpg",
+    photo: "/presidents/40.png",
   },
   {
     id: 41,
@@ -365,8 +325,7 @@ const presidents = [
     name: "George H. W. Bush",
     yearsInOffice: "1989-1993",
     vicePresidents: ["Dan Quayle"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/George_H._W._Bush%2C_President_of_the_United_States%2C_1989_official_portrait_cropped%28b%29.jpg/220px-George_H._W._Bush%2C_President_of_the_United_States%2C_1989_official_portrait_cropped%28b%29.jpg",
+    photo: "/presidents/41.png",
   },
   {
     id: 42,
@@ -374,8 +333,7 @@ const presidents = [
     name: "Bill Clinton",
     yearsInOffice: "1993-2001",
     vicePresidents: ["Al Gore"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/220px-Bill_Clinton.jpg",
+    photo: "/presidents/42.png",
   },
   {
     id: 43,
@@ -383,8 +341,7 @@ const presidents = [
     name: "George W. Bush",
     yearsInOffice: "2001-2009",
     vicePresidents: ["Dick Cheney"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/220px-George-W-Bush.jpeg",
+    photo: "/presidents/43.png",
   },
   {
     id: 44,
@@ -392,8 +349,7 @@ const presidents = [
     name: "Barack Obama",
     yearsInOffice: "2009-2017",
     vicePresidents: ["Joe Biden"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg",
+    photo: "/presidents/44.png",
   },
   {
     id: 45,
@@ -401,8 +357,7 @@ const presidents = [
     name: "Donald Trump",
     yearsInOffice: "2017-present",
     vicePresidents: ["Mike Pence"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/220px-Donald_Trump_official_portrait.jpg",
+    photo: "/presidents/45.png",
   },
   {
     id: 46,
@@ -410,7 +365,6 @@ const presidents = [
     name: "Joe Biden",
     yearsInOffice: "2021-present",
     vicePresidents: ["Kamala Harris"],
-    photo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/220px-Donald_Trump_official_portrait.jpg",
+    photo: "/presidents/46.png",
   },
 ];
