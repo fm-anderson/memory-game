@@ -1,19 +1,18 @@
-import { presidents } from "../presidents";
+import { randomKey } from "../utils/helpers";
 import Card from "./Card";
 
-function Game() {
+function Game({ cards, handleChoice }) {
   return (
-    <div className="mx-10 grid grid-cols-5 gap-4">
-      <Card image={presidents[0].photo} />
-      <Card image={presidents[1].photo} />
-      <Card image={presidents[2].photo} />
-      <Card image={presidents[3].photo} />
-      <Card image={presidents[4].photo} />
-      <Card image={presidents[12].photo} />
-      <Card image={presidents[45].photo} />
-      <Card image={presidents[6].photo} />
-      <Card image={presidents[44].photo} />
-      <Card image={presidents[43].photo} />
+    <div className="m-10 grid max-w-screen-lg grid-cols-6 gap-4">
+      {cards.map((cardItem) => {
+        return (
+          <Card
+            key={randomKey(8)}
+            cardItem={cardItem}
+            handleChoice={handleChoice}
+          />
+        );
+      })}
     </div>
   );
 }

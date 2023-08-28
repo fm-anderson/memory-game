@@ -12,7 +12,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  useDebugRender();
+  // useDebugRender();
 
   return (
     <div>
