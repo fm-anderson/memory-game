@@ -8,6 +8,8 @@ A fun and interactive memory card game featuring U.S. presidents as Pixar charac
 
 This game challenges players to match cards featuring funny U.S. Presidents avatars. Players flip over two cards at a time, trying to find matching pairs. The game continues until all pairs are found.
 
+**Try it →** https://presidents.fm-anderson.com/
+
 ## Features
 
 - Three difficulty levels: easy, medium, and hard.
