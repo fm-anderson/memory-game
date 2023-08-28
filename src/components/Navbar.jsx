@@ -1,8 +1,8 @@
 function Navbar() {
   return (
-    <header className="navbar bg-base-300">
+    <header className="navbar bg-base-300 max-w-full lg:mt-2 lg:max-w-[80%] lg:rounded-lg lg:shadow-md">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl normal-case">MemoryGame</a>
+        <p className="ml-2 text-xl font-semibold">Presidents - Memory Game</p>
       </div>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost">

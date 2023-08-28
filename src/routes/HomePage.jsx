@@ -10,7 +10,7 @@ function HomePage() {
   const [cards, setCards] = useState(randomCards(presidents, level));
 
   return (
-    <div className="flex h-screen flex-col items-center justify-between text-center">
+    <div className="bg-base-100 flex h-screen flex-col items-center justify-between text-center">
       <Navbar />
 
       <main className="grid max-w-full lg:max-w-[80%]">

@@ -1,13 +1,16 @@
 function Footer() {
   return (
-    <footer className="footer bg-base-300 items-center p-4">
+    <footer className="footer bg-base-300 max-w-full items-center p-4">
       <div className="grid-flow-col justify-self-center md:justify-self-start">
         <p className="justify-self-center">
-          Copyright © {new Date().getFullYear()} - All right reserved
+          Memory Game © {new Date().getFullYear()} - Presidents
         </p>
       </div>
       <div className="grid-flow-col gap-4 justify-self-center md:justify-self-end">
-        <a>
+        <a
+          href="https://github.com/fm-anderson/memory-game#readme"
+          target="_blank"
+        >
           <svg
             className="h-8 w-8 fill-current"
             xmlns="http://www.w3.org/2000/svg"
