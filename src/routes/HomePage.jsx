@@ -1,22 +1,13 @@
 import { useState } from "react";
+import Game from "../components/Game";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Game from "../components/Game";
-import { randomCards } from "../utils/helpers";
+import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
 
 function HomePage() {
   const [level, setLevel] = useState("medium");
-  const [turns, setTurns] = useState(0);
-  const [choiceOne, setChoiceOne] = useState(null);
-  const [choiceTwo, setChoiceTwo] = useState(null);
-  const [disabled, setDisabled] = useState(false);
   const [cards, setCards] = useState(randomCards(presidents, level));
-
-  const handleChoice = (card) => {
-    console.log("handleChoice ", card);
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
-  };
 
   return (
     <div className="flex h-screen flex-col items-center justify-between text-center">

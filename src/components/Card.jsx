@@ -1,34 +1,48 @@
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { flippedAtom } from "../App";
-import { isCurrentFlipped, isMismatched } from "../utils/helpers";
+import { flippedAtom, matchedAtom } from "../utils/atoms";
+import { isCurrentFlipped, isMatch, resetFlipped } from "../utils/game";
 
 function Card({ cardItem }) {
   const [flipped, setFlipped] = useState(false);
-  const [flippedCards, setFlippedCards] = useAtom(flippedAtom);
+  const [matched, setMatched] = useAtom(matchedAtom);
+  const [active, setActive] = useAtom(flippedAtom);
 
   useEffect(() => {
-    if (isMismatched(flippedCards)) {
-      const timer = setTimeout(() => {
-        setFlippedCards({ flippedOne: "", flippedTwo: "" });
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    } else if (!isCurrentFlipped(cardItem, flippedCards)) {
+    if (active.flippedOne && active.flippedTwo) {
+      if (isMatch(active)) {
+        setMatched((prevState) => {
+          if (prevState.some((card) => card.id === active.flippedOne.id)) {
+            return prevState;
+          }
+          return [...prevState, active.flippedOne];
+        });
+        setActive({ flippedOne: "", flippedTwo: "" });
+      } else {
+        resetFlipped(setActive);
+      }
+    } else if (
+      !isCurrentFlipped(cardItem, active) &&
+      !matched.some((matchedCard) => matchedCard.id === cardItem.id)
+    ) {
       setFlipped(false);
     }
-  }, [flippedCards, cardItem, setFlippedCards]);
+  }, [active, cardItem, setActive]);
 
   const handleFlip = () => {
+    if (active.flippedOne && active.flippedTwo) {
+      return;
+    }
     setFlipped(true);
     handleChoice(cardItem);
+    console.log(matched);
   };
 
   const handleChoice = (card) => {
-    if (!flippedCards.flippedOne) {
-      setFlippedCards((prevState) => ({ ...prevState, flippedOne: card }));
+    if (!active.flippedOne) {
+      setActive((prevState) => ({ ...prevState, flippedOne: card }));
     } else {
-      setFlippedCards((prevState) => ({ ...prevState, flippedTwo: card }));
+      setActive((prevState) => ({ ...prevState, flippedTwo: card }));
     }
   };
 
