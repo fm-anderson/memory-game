@@ -1,4 +1,4 @@
-export function randomCards(arr, level) {
+export const randomCards = (arr, level) => {
   const shuffled = arr.sort(() => 0.5 - Math.random());
   let playingCards = [];
 
@@ -16,7 +16,15 @@ export function randomCards(arr, level) {
 
   const cards = [...playingCards, ...playingCards];
   return cards.sort(() => 0.5 - Math.random());
-}
+};
+
+export const isMismatched = (cards) =>
+  cards.flippedOne &&
+  cards.flippedTwo &&
+  cards.flippedOne.id !== cards.flippedTwo.id;
+
+export const isCurrentFlipped = (card, cards) =>
+  card === cards.flippedOne || card === cards.flippedTwo;
 
 export const randomKey = (length) => {
   let result = "";

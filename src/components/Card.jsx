@@ -1,28 +1,20 @@
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { flippedAtom } from "../App";
+import { isCurrentFlipped, isMismatched } from "../utils/helpers";
 
 function Card({ cardItem }) {
   const [flipped, setFlipped] = useState(false);
   const [flippedCards, setFlippedCards] = useAtom(flippedAtom);
 
   useEffect(() => {
-    if (
-      flippedCards.flippedOne &&
-      flippedCards.flippedTwo &&
-      flippedCards.flippedOne.id !== flippedCards.flippedTwo.id
-    ) {
+    if (isMismatched(flippedCards)) {
       const timer = setTimeout(() => {
         setFlippedCards({ flippedOne: "", flippedTwo: "" });
       }, 1000);
 
       return () => clearTimeout(timer);
-    }
-
-    if (
-      cardItem !== flippedCards.flippedOne &&
-      cardItem !== flippedCards.flippedTwo
-    ) {
+    } else if (!isCurrentFlipped(cardItem, flippedCards)) {
       setFlipped(false);
     }
   }, [flippedCards, cardItem, setFlippedCards]);
