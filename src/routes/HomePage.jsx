@@ -6,7 +6,7 @@ import { randomCards } from "../utils/helpers";
 import { presidents } from "../utils/presidents";
 
 function HomePage() {
-  const [level, setLevel] = useState("easy");
+  const [level, setLevel] = useState("medium");
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
@@ -23,7 +23,7 @@ function HomePage() {
       <Navbar />
 
       <main className="grid max-w-full lg:max-w-[80%]">
-        <Game cards={cards} handleChoice={handleChoice} />
+        <Game cards={cards} />
       </main>
 
       <Footer />

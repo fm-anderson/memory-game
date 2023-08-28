@@ -2,6 +2,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import useDebugRender from "tilg";
 import HomePage from "./routes/HomePage";
 import ErrorPage from "./routes/ErrorPage";
+import { atom } from "jotai";
+
+export const flippedAtom = atom({ flippedOne: "", flippedTwo: "" });
 
 const router = createBrowserRouter([
   {
