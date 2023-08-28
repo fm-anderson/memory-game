@@ -7,7 +7,7 @@ function Card({ cardItem }) {
   const [flipped, setFlipped] = useState(false);
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
-  const cardClasses = matched.includes(cardItem) ? "mask mask-squircle" : "";
+  const matchedClass = matched.includes(cardItem) ? "mask mask-squircle" : "";
 
   useEffect(() => {
     if (active.flippedOne && active.flippedTwo) {
@@ -30,7 +30,6 @@ function Card({ cardItem }) {
     }
     setFlipped(true);
     handleChoice(cardItem);
-    console.log(matched);
   };
 
   const handleChoice = (card) => {
@@ -50,7 +49,7 @@ function Card({ cardItem }) {
       <div className="swap-on">
         <img
           src={cardItem.photo}
-          className={`rounded-xl drop-shadow-lg ${cardClasses}`}
+          className={`rounded-xl drop-shadow-lg ${matchedClass}`}
         />
       </div>
     </label>

@@ -1,4 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useAtom } from "jotai";
+import { themeAtom } from "./utils/atoms";
 import HomePage from "./routes/HomePage";
 import ErrorPage from "./routes/ErrorPage";
 
@@ -11,8 +13,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [theme] = useAtom(themeAtom);
+
   return (
-    <div>
+    <div data-theme={theme}>
       <RouterProvider router={router} />
     </div>
   );
