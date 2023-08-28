@@ -29,6 +29,6 @@ export const isCurrentFlipped = (card, cards) => {
 export const resetFlipped = (setter) => {
   const timer = setTimeout(() => {
     setter({ flippedOne: "", flippedTwo: "" });
-  }, 1000);
+  }, 800);
   return () => clearTimeout(timer);
 };

@@ -7,17 +7,22 @@ function Card({ cardItem }) {
   const [flipped, setFlipped] = useState(false);
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
+  const cardClasses = matched.includes(cardItem) ? "mask mask-squircle" : "";
 
   useEffect(() => {
     if (active.flippedOne && active.flippedTwo) {
       if (isMatch(active)) {
-        setMatched((prevState) => {
-          if (prevState.some((card) => card.id === active.flippedOne.id)) {
-            return prevState;
-          }
-          return [...prevState, active.flippedOne];
-        });
-        setActive({ flippedOne: "", flippedTwo: "" });
+        const matchTimer = setTimeout(() => {
+          setMatched((prevState) => {
+            if (prevState.some((card) => card.id === active.flippedOne.id)) {
+              return prevState;
+            }
+            return [...prevState, active.flippedOne];
+          });
+          setActive({ flippedOne: "", flippedTwo: "" });
+        }, 1000);
+
+        return () => clearTimeout(matchTimer);
       } else {
         resetFlipped(setActive);
       }
@@ -46,6 +51,7 @@ function Card({ cardItem }) {
     }
   };
 
+  // mask mask-circle
   return (
     <label className="swap swap-flip">
       <input type="checkbox" checked={flipped} onChange={handleFlip} />
@@ -53,7 +59,10 @@ function Card({ cardItem }) {
         <img src="/presidents/back.png" className="rounded-xl" />
       </div>
       <div className="swap-on">
-        <img src={cardItem.photo} className="rounded-xl drop-shadow-lg" />
+        <img
+          src={cardItem.photo}
+          className={`rounded-xl drop-shadow-lg ${cardClasses}`}
+        />
       </div>
     </label>
   );
