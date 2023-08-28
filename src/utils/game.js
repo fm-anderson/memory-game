@@ -2,21 +2,21 @@ import { shuffleArray } from "./helpers";
 
 export const randomCards = (arr, level) => {
   let playingCards = [];
+  const shuffledArr = shuffleArray(arr);
 
   switch (level) {
     case "medium":
-      playingCards = arr.slice(0, 12);
+      playingCards = shuffledArr.slice(0, 12);
       break;
     case "hard":
-      playingCards = arr.slice(0, 15);
+      playingCards = shuffledArr.slice(0, 15);
       break;
     default:
-      playingCards = arr.slice(0, 9);
+      playingCards = shuffledArr.slice(0, 9);
       break;
   }
-
   const cards = [...playingCards, ...playingCards];
-  return shuffleArray(cards);
+  return cards;
 };
 
 export const isMatch = (cards) => {
