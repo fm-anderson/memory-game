@@ -8,6 +8,8 @@ function Card({ cardItem }) {
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
   const matchedClass = matched.includes(cardItem) ? "mask mask-squircle" : "";
+  const shadowClass =
+    "shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]";
 
   useEffect(() => {
     if (active.flippedOne && active.flippedTwo) {
@@ -43,7 +45,7 @@ function Card({ cardItem }) {
   return (
     <label className="swap swap-flip">
       <input type="checkbox" checked={flipped} onChange={handleFlip} />
-      <div className="swap-off bg-accent rounded-xl shadow-lg">
+      <div className={`swap-off bg-accent rounded-xl ${shadowClass}`}>
         <img src="/presidents/back.png" className="rounded-xl" />
       </div>
       <div className="swap-on">

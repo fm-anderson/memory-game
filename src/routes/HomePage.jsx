@@ -1,9 +1,11 @@
 import { useState } from "react";
-import Game from "../components/Game";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
+import Game from "../components/Game";
+import Stack from "../components/Stack";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Counter from "../components/Counter";
 
 function HomePage() {
   const [level, setLevel] = useState("medium");
@@ -13,8 +15,13 @@ function HomePage() {
     <div className="bg-base-100 flex h-screen flex-col items-center justify-between text-center">
       <Navbar />
 
-      <main className="grid max-w-full lg:max-w-[80%]">
+      <main className="flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%]">
         <Game cards={cards} />
+        <div className="m-4 gap-4">
+          <Counter />
+          <div className="divider m-4"></div>
+          <Stack />
+        </div>
       </main>
 
       <Footer />
