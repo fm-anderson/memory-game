@@ -38,15 +38,15 @@ This game challenges players to match cards featuring funny U.S. Presidents avat
 
 ## Libraries
 
-| Library      | GitHub                                      |
-| ------------ | ------------------------------------------- |
-| react-router | https://reactrouter.com/en/main             |
-| jotai        | https://jotai.org/                          |
-| tailwindcss  | https://github.com/tailwindlabs/tailwindcss |
-| daisyui      | https://github.com/saadeghi/daisyui         |
+| Library      | GitHub                   |
+| ------------ | ------------------------ |
+| react-router | https://reactrouter.com/ |
+| jotai        | https://jotai.org/       |
+| tailwindcss  | https://tailwindcss.com/ |
+| daisyui      | https://daisyui.com/     |
 
 ## Contributing
 
 If you find a bug, you can either fork the repository and submit a [pull request](https://github.com/fm-anderson/memory-game/pulls) with the fixed code or create a [new issue here](https://github.com/fm-anderson/memory-game/issues).
 
-If you want to contribute by adding new features, fork the repository and submit a [pull requet here.](https://github.com/fm-anderson/memory-game/pulls) create a pull request. For significant code changes, start a [conversation here](https://github.com/fm-anderson/memory-game/issues).
+If you want to contribute by adding new features, fork the repository and submit a [pull requet here](https://github.com/fm-anderson/memory-game/pulls). For major code changes, start a [conversation here](https://github.com/fm-anderson/memory-game/issues).
