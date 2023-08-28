@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { flippedAtom, matchedAtom } from "../utils/atoms";
-import { isCurrentFlipped, isMatch, resetFlipped } from "../utils/game";
+import { handleMatch, checkCards, isMatch, resetFlipped } from "../utils/game";
 
 function Card({ cardItem }) {
   const [flipped, setFlipped] = useState(false);
@@ -12,22 +12,12 @@ function Card({ cardItem }) {
   useEffect(() => {
     if (active.flippedOne && active.flippedTwo) {
       if (isMatch(active)) {
-        const matchTimer = setTimeout(() => {
-          setMatched((prevState) => {
-            if (prevState.some((card) => card.id === active.flippedOne.id)) {
-              return prevState;
-            }
-            return [...prevState, active.flippedOne];
-          });
-          setActive({ flippedOne: "", flippedTwo: "" });
-        }, 1000);
-
-        return () => clearTimeout(matchTimer);
+        handleMatch(active, setMatched, setActive);
       } else {
         resetFlipped(setActive);
       }
     } else if (
-      !isCurrentFlipped(cardItem, active) &&
+      !checkCards(cardItem, active) &&
       !matched.some((matchedCard) => matchedCard.id === cardItem.id)
     ) {
       setFlipped(false);
@@ -51,7 +41,6 @@ function Card({ cardItem }) {
     }
   };
 
-  // mask mask-circle
   return (
     <label className="swap swap-flip">
       <input type="checkbox" checked={flipped} onChange={handleFlip} />
