@@ -355,7 +355,7 @@ export const presidents = [
     id: 45,
     ordinal: 45,
     name: "Donald Trump",
-    yearsInOffice: "2017-present",
+    yearsInOffice: "2017-2021",
     vicePresidents: ["Mike Pence"],
     photo: "/presidents/45.png",
   },
