@@ -1,24 +1,22 @@
 import { useState } from "react";
-import { randomCards } from "../utils/game";
-import { presidents } from "../utils/presidents";
 import Game from "../components/Game";
 import Stack from "../components/Stack";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Counter from "../components/Counter";
 import Intro from "../components/Intro";
+import Confirmation from "../components/Confirmation";
 
 function HomePage() {
-  const [level, setLevel] = useState("");
-  const [cards, setCards] = useState(randomCards(presidents, level));
+  const [cards, setCards] = useState([]);
+  const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="bg-base-100 flex h-screen flex-col items-center justify-between text-center">
+    <div className="flex h-screen flex-col items-center justify-between bg-base-100 text-center">
       <Navbar />
 
       <main className="flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%]">
-        {level === "" && <Intro />}
-        {level !== "" && (
+        {playing ? (
           <>
             <Game cards={cards} />
             <div className="m-4 gap-4 md:w-64">
@@ -27,10 +25,13 @@ function HomePage() {
               <Stack />
             </div>
           </>
+        ) : (
+          <Intro />
         )}
       </main>
 
       <Footer />
+      <Confirmation setPlaying={setPlaying} setCards={setCards} />
     </div>
   );
 }
