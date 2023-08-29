@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { flippedAtom, matchedAtom } from "../utils/atoms";
+import { flippedAtom, matchedAtom, turnsAtom } from "../utils/atoms";
 import { handleMatch, checkCards, isMatch, resetFlipped } from "../utils/game";
 
 function Card({ cardItem, uniqueKey }) {
   const [flipped, setFlipped] = useState(false);
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
+  const [, setTurn] = useAtom(turnsAtom);
   const matchedClass = matched.some((card) => card.id === cardItem.id)
     ? "mask mask-squircle"
     : "";
@@ -45,6 +46,7 @@ function Card({ cardItem, uniqueKey }) {
       setActive((prevState) => ({ ...prevState, flippedOne: card }));
     } else {
       setActive((prevState) => ({ ...prevState, flippedTwo: card }));
+      setTurn((prevState) => prevState + 1);
     }
   };
 
