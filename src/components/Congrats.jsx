@@ -3,11 +3,12 @@ import LevelButtons from "./LevelButtons";
 function Congrats() {
   return (
     <div className="flex flex-col">
-      <p className="my-5 text-xl font-semibold">Game Completed! 🎉</p>
       <p className="mb-3 text-xl font-semibold">Play Again?</p>
 
-      <div className="flex justify-center gap-2 md:grid">
+      <div className="mb-2 flex justify-center gap-2 md:grid">
         <LevelButtons />
+      </div>
+      <div>
         <button
           className="btn bg-base-300"
           onClick={() => window.location.reload()}
