@@ -1,15 +1,17 @@
 import { useAtom } from "jotai";
-import { levelAtom } from "../utils/atoms";
+import { levelAtom, turnsAtom } from "../utils/atoms";
 import { capitalizeFirstLetter } from "../utils/helpers";
 import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
 
 function Confirmation({ setPlaying, setCards }) {
   const [level] = useAtom(levelAtom);
+  const [, setTurn] = useAtom(turnsAtom);
 
   const handleStart = () => {
     setCards(randomCards(presidents, level));
     setPlaying(true);
+    setTurn(0);
   };
 
   let buttonColor;

@@ -3,12 +3,15 @@ import { useAtom } from "jotai";
 import { flippedAtom, matchedAtom, turnsAtom } from "../utils/atoms";
 import { handleMatch, checkCards, isMatch, resetFlipped } from "../utils/game";
 
-function Card({ cardItem, uniqueKey }) {
+function Card({ cardItem, uniqueKey, gameCompleted }) {
   const [flipped, setFlipped] = useState(false);
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
   const [, setTurn] = useAtom(turnsAtom);
-  const matchedClass = matched.some((card) => card.id === cardItem.id)
+
+  const matchedClass = gameCompleted
+    ? "mask mask-circle"
+    : matched.some((card) => card.id === cardItem.id)
     ? "mask mask-squircle"
     : "";
 
@@ -53,7 +56,7 @@ function Card({ cardItem, uniqueKey }) {
   return (
     <label className="swap swap-flip">
       <input type="checkbox" checked={flipped} onChange={handleFlip} />
-      <div className={`swap-off bg-accent rounded-xl ${shadowClass}`}>
+      <div className={`swap-off rounded-xl bg-accent ${shadowClass}`}>
         <img src="/presidents/back.png" className="rounded-xl" />
       </div>
       <div className="swap-on">
