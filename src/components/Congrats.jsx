@@ -10,7 +10,7 @@ function Congrats() {
       </div>
       <div>
         <button
-          className="btn bg-base-300"
+          className="btn bg-base-300 md:w-40"
           onClick={() => window.location.reload()}
         >
           <svg
