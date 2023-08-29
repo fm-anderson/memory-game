@@ -1,39 +1,13 @@
-import { useAtom } from "jotai";
-import { levelAtom } from "../utils/atoms";
-import { Link } from "react-router-dom";
+import LevelButtons from "./LevelButtons";
 
 function Congrats() {
-  const [, setLevel] = useAtom(levelAtom);
-
-  const handleClick = (selected) => {
-    setLevel(selected);
-    window.confirm_modal.showModal();
-  };
-
   return (
     <div className="flex flex-col">
       <p className="my-5 text-xl font-semibold">Game Completed! 🎉</p>
       <p className="mb-3 text-xl font-semibold">Play Again?</p>
 
       <div className="flex justify-center gap-2 md:grid">
-        <button
-          className="btn btn-primary w-24 md:w-40"
-          onClick={() => handleClick("easy")}
-        >
-          Easy
-        </button>
-        <button
-          className="btn btn-accent w-24 md:w-40"
-          onClick={() => handleClick("medium")}
-        >
-          Medium
-        </button>
-        <button
-          className="btn btn-neutral w-24 md:w-40"
-          onClick={() => handleClick("hard")}
-        >
-          Hard
-        </button>
+        <LevelButtons />
         <button
           className="btn bg-base-300"
           onClick={() => window.location.reload()}
