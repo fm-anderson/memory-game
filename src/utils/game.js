@@ -1,4 +1,4 @@
-import { shuffleArray } from "./helpers";
+import { shuffleArray, randomKey } from "./helpers";
 
 export const randomCards = (arr, level) => {
   let playingCards = [];
@@ -15,8 +15,12 @@ export const randomCards = (arr, level) => {
       playingCards = shuffledArr.slice(0, 9);
       break;
   }
-  const cards = [...playingCards, ...playingCards];
-  return cards;
+  const duplicatedArr = [...playingCards, ...playingCards];
+  const arrWithKeys = duplicatedArr.map((card) => ({
+    ...card,
+    uniqueKey: randomKey(8),
+  }));
+  return arrWithKeys;
 };
 
 export const isMatch = (cards) => {

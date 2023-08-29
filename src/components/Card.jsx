@@ -3,11 +3,14 @@ import { useAtom } from "jotai";
 import { flippedAtom, matchedAtom } from "../utils/atoms";
 import { handleMatch, checkCards, isMatch, resetFlipped } from "../utils/game";
 
-function Card({ cardItem }) {
+function Card({ cardItem, uniqueKey }) {
   const [flipped, setFlipped] = useState(false);
   const [matched, setMatched] = useAtom(matchedAtom);
   const [active, setActive] = useAtom(flippedAtom);
-  const matchedClass = matched.includes(cardItem) ? "mask mask-squircle" : "";
+  const matchedClass = matched.some((card) => card.id === cardItem.id)
+    ? "mask mask-squircle"
+    : "";
+
   const shadowClass =
     "shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]";
 
@@ -27,6 +30,9 @@ function Card({ cardItem }) {
   }, [active, cardItem, setActive]);
 
   const handleFlip = () => {
+    if (active.flippedOne && uniqueKey === active.flippedOne.uniqueKey) {
+      return;
+    }
     if (active.flippedOne && active.flippedTwo) {
       return;
     }
@@ -51,7 +57,7 @@ function Card({ cardItem }) {
       <div className="swap-on">
         <img
           src={cardItem.photo}
-          className={`rounded-xl drop-shadow-lg ${matchedClass}`}
+          className={`rounded-xl drop-shadow-xl ${matchedClass}`}
         />
       </div>
     </label>
