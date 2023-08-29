@@ -10,7 +10,7 @@ function Intro() {
   return (
     <div className="mx-4 flex flex-col gap-4 md:flex-row">
       <div className="flex flex-col justify-around">
-        <h1 className="mb-10 text-start text-4xl font-bold md:m-0  lg:text-7xl">
+        <h1 className="mb-10 text-start text-4xl font-bold md:m-0 lg:text-7xl">
           U.S. presidents as{" "}
           <span className="text-accent">Pixar characters!</span>
         </h1>

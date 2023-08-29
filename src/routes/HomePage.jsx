@@ -17,7 +17,7 @@ function HomePage() {
       <Navbar />
 
       <main className="flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%]">
-        <Intro />
+        {level === "" && <Intro />}
         {level !== "" && (
           <>
             <Game cards={cards} />
