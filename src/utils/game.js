@@ -20,7 +20,7 @@ export const randomCards = (arr, level) => {
     ...card,
     uniqueKey: randomKey(8),
   }));
-  return arrWithKeys;
+  return shuffleArray(arrWithKeys);
 };
 
 export const isMatch = (cards) => {
