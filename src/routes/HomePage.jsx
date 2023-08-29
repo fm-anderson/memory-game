@@ -17,7 +17,7 @@ function HomePage() {
 
       <main className="flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%]">
         <Game cards={cards} />
-        <div className="m-4 w-64 gap-4">
+        <div className="m-4 gap-4 md:w-64">
           <Counter />
           <div className="divider m-4"></div>
           <Stack />
