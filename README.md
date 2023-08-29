@@ -50,3 +50,39 @@ This game challenges players to match cards featuring funny U.S. Presidents avat
 If you find a bug, you can either fork the repository and submit a [pull request](https://github.com/fm-anderson/memory-game/pulls) with the fixed code or create a [new issue here](https://github.com/fm-anderson/memory-game/issues).
 
 If you want to contribute by adding new features, fork the repository and submit a [pull requet here](https://github.com/fm-anderson/memory-game/pulls). For major code changes, start a [conversation here](https://github.com/fm-anderson/memory-game/issues).
+
+## Screenshots (Desktop)
+
+<img src="./src/assets/screenshots/home-light.png" width="600"/>
+
+---
+
+<img src="./src/assets/screenshots/home-dark.png" width="600"/>
+
+---
+
+<img src="./src/assets/screenshots/flipped-light.png" width="600"/>
+
+---
+
+<img src="./src/assets/screenshots/flipped-dark.png" width="600"/>
+
+---
+
+## Screenshots (Mobile)
+
+<img src="./src/assets/screenshots/home-m-light.png" width="200"/>
+
+---
+
+<img src="./src/assets/screenshots/home-m-dark.png" width="200"/>
+
+---
+
+<img src="./src/assets/screenshots/flipped-m-light.png" width="200"/>
+
+---
+
+<img src="./src/assets/screenshots/flipped-m-dark.png" width="200"/>
+
+---
