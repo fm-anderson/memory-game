@@ -1,5 +1,10 @@
 import { useAtom } from "jotai";
-import { levelAtom, turnsAtom } from "../utils/atoms";
+import {
+  completedAtom,
+  levelAtom,
+  matchedAtom,
+  turnsAtom,
+} from "../utils/atoms";
 import { capitalizeFirstLetter, shadowStiglitz } from "../utils/helpers";
 import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
@@ -7,10 +12,14 @@ import { presidents } from "../utils/presidents";
 function Confirmation({ setPlaying, setCards }) {
   const [level] = useAtom(levelAtom);
   const [, setTurn] = useAtom(turnsAtom);
+  const [, setGameCompleted] = useAtom(completedAtom);
+  const [, setMatched] = useAtom(matchedAtom);
 
   const handleStart = () => {
     setCards(randomCards(presidents, level));
+    setGameCompleted(false);
     setPlaying(true);
+    setMatched([]);
     setTurn(0);
   };
 
