@@ -1,10 +1,11 @@
+import { shadowStiglitz } from "../utils/helpers";
 import ThemeSelector from "./ThemeSelector";
 
 function Navbar() {
   return (
-    <header className="navbar bg-base-300 max-w-full lg:mt-2 lg:max-w-[90%] lg:rounded-lg lg:shadow-md">
+    <header className={`navbar max-w-full bg-base-300 ${shadowStiglitz}`}>
       <div className="flex-1">
-        <p className="ml-2 text-xl font-semibold">Memory Game</p>
+        <p className="ml-2 text-xl font-semibold drop-shadow-sm">Memory Game</p>
       </div>
       <div className="flex-none">
         <ThemeSelector />

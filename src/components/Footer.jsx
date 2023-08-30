@@ -1,8 +1,12 @@
+import { shadowIntense } from "../utils/helpers";
+
 function Footer() {
   return (
-    <footer className="footer bg-base-300 max-w-full items-center p-4">
+    <footer
+      className={`footer max-w-full items-center bg-base-300 p-4 ${shadowIntense}`}
+    >
       <div className="grid-flow-col justify-self-center md:justify-self-start">
-        <p className="justify-self-center font-light">
+        <p className="justify-self-center drop-shadow-sm">
           Memory Game © {new Date().getFullYear()} - Presidents
         </p>
       </div>
@@ -14,7 +18,7 @@ function Footer() {
               target="_blank"
             >
               <svg
-                className="h-10 w-10 fill-current"
+                className="h-10 w-10 fill-current drop-shadow-xl"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >

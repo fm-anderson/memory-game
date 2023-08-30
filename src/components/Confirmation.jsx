@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import { levelAtom, turnsAtom } from "../utils/atoms";
-import { capitalizeFirstLetter } from "../utils/helpers";
+import { capitalizeFirstLetter, shadowStiglitz } from "../utils/helpers";
 import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
 
@@ -32,20 +32,23 @@ function Confirmation({ setPlaying, setCards }) {
   return (
     <dialog id="confirm_modal" className="modal modal-bottom sm:modal-middle">
       <form method="dialog" className="modal-box">
-        <h3 className="text-2xl font-bold">
+        <h3 className="text-2xl font-bold drop-shadow-sm">
           You've selected: {capitalizeFirstLetter(level)}
         </h3>
-        <p className="mb-6 py-4 text-xl">Ready to start?</p>
+        <p className="mb-6 py-4 text-xl drop-shadow-sm">Ready to start?</p>
         <span className="flex justify-center gap-4">
-          <button className={`btn ${buttonColor} w-24`} onClick={handleStart}>
+          <button
+            className={`btn ${buttonColor} w-24 ${shadowStiglitz}`}
+            onClick={handleStart}
+          >
             Start
           </button>
-          <button className="btn w-24">Cancel</button>
+          <button className={`btn w-24 ${shadowStiglitz}`}>Cancel</button>
         </span>
       </form>
 
       <form method="dialog" className="modal-backdrop">
-        <button>close</button>
+        <button></button>
       </form>
     </dialog>
   );
