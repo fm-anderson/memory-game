@@ -1,3 +1,181 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .layout {
+    @apply flex h-screen flex-col items-center justify-between bg-base-100 text-center;
+  }
+
+  .main {
+    @apply flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%];
+  }
+
+  .sidebar {
+    @apply m-4 gap-4 md:w-64;
+  }
+
+  .split {
+    @apply divider m-4;
+  }
+
+  .nav {
+    @apply navbar max-w-full justify-between bg-base-300 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+  }
+
+  .nav-title {
+    @apply ml-2 text-xl font-semibold drop-shadow-sm;
+  }
+
+  .swap-svg {
+    @apply h-7 w-7 fill-current drop-shadow-xl;
+  }
+
+  .intro {
+    @apply mx-4 flex flex-col gap-4 md:flex-row;
+  }
+
+  .intro-info {
+    @apply flex flex-col justify-around;
+  }
+
+  .intro-title {
+    @apply mb-10 text-start text-4xl font-bold drop-shadow-md md:m-0 lg:text-7xl;
+  }
+
+  .intro-text {
+    @apply mb-2 text-start text-3xl font-bold drop-shadow-md md:mb-5 lg:text-6xl;
+  }
+
+  .intro-image {
+    @apply lg:w-[80%] 2xl:w-[50%];
+  }
+
+  .level-buttons {
+    @apply flex flex-row justify-start gap-4;
+  }
+
+  .game {
+    @apply m-4 grid max-w-screen-lg grid-cols-4 gap-2 md:mx-4 md:grid-cols-6 md:gap-4;
+  }
+
+  .card-back {
+    @apply swap-off rounded-xl bg-accent shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+  }
+
+  .card-front {
+    @apply rounded-xl drop-shadow-xl;
+  }
+
+  .counter {
+    @apply card h-fit w-full bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px];
+  }
+
+  .counter-text {
+    @apply justify-start text-lg font-semibold;
+  }
+
+  .info-card {
+    @apply card w-full bg-base-100 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] md:w-64;
+  }
+
+  .info-image {
+    @apply hidden px-3 pt-3 md:flex;
+  }
+
+  .info-content {
+    @apply my-3 items-center text-center;
+  }
+
+  .congrats {
+    @apply flex flex-col;
+  }
+
+  .congrats-title {
+    @apply mb-3 text-xl font-semibold;
+  }
+
+  .congrats-buttons {
+    @apply mb-2 flex justify-center gap-3 md:grid;
+  }
+
+  .congrats-home {
+    @apply btn mt-4 bg-base-300 shadow-sm md:w-40 md:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)];
+  }
+
+  .btn-easy {
+    @apply btn btn-primary w-24 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] md:w-40;
+  }
+
+  .btn-medium {
+    @apply btn btn-accent w-24 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] md:w-40;
+  }
+
+  .btn-hard {
+    @apply btn btn-neutral w-24 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] md:w-40;
+  }
+
+  .footer-container {
+    @apply footer max-w-full items-center bg-base-300 p-4 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px];
+  }
+
+  .footer-r {
+    @apply grid-flow-col justify-self-center md:justify-self-start;
+  }
+
+  .footer-l {
+    @apply grid-flow-col justify-self-center md:justify-self-end;
+  }
+
+  .footer-svg {
+    @apply h-10 w-10 fill-current drop-shadow-xl;
+  }
+
+  .modal-confirm {
+    @apply modal modal-bottom sm:modal-middle;
+  }
+
+  .modal-title {
+    @apply text-2xl font-bold drop-shadow-sm;
+  }
+
+  .modal-subtitle {
+    @apply mb-6 py-4 text-xl drop-shadow-sm;
+  }
+
+  .modal-buttons {
+    @apply flex justify-center gap-4;
+  }
+
+  .modal-cancel {
+    @apply btn w-24 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+  }
+
+  .shadow-stiglitz {
+    @apply shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px];
+  }
+
+  .error {
+    @apply hero min-h-screen bg-base-100 bg-gradient-to-r;
+  }
+
+  .error-content {
+    @apply hero-content text-center;
+  }
+
+  .error-title {
+    @apply text-3xl font-bold;
+  }
+
+  .error-message {
+    @apply py-6 text-2xl;
+  }
+
+  .error-actions {
+    @apply flex justify-center gap-4;
+  }
+
+  .error-svg {
+    @apply h-6 w-6 fill-current;
+  }
+}

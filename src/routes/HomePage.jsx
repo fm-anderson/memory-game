@@ -16,16 +16,16 @@ function HomePage() {
   const [gameCompleted] = useAtom(completedAtom);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-between bg-base-100 text-center">
+    <div className="layout">
       <Navbar />
 
-      <main className="flex max-w-full flex-col-reverse md:flex-row lg:max-w-[90%]">
+      <main className="main">
         {playing ? (
           <>
             <Game cards={cards} />
-            <div className="m-4 gap-4 md:w-64">
+            <div className="sidebar">
               <Counter />
-              <div className="divider m-4"></div>
+              <div className="split"></div>
               {gameCompleted ? <Congrats /> : <Stack />}
             </div>
           </>

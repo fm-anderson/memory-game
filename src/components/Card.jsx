@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { flippedAtom, matchedAtom, turnsAtom } from "../utils/atoms";
 import { handleMatch, checkCards, isMatch, resetFlipped } from "../utils/game";
-import { shadowStiglitz } from "../utils/helpers";
 
 function Card({ cardItem, uniqueKey, gameCompleted }) {
   const [flipped, setFlipped] = useState(false);
@@ -54,14 +53,11 @@ function Card({ cardItem, uniqueKey, gameCompleted }) {
   return (
     <label className="swap swap-flip">
       <input type="checkbox" checked={flipped} onChange={handleFlip} />
-      <div className={`swap-off rounded-xl bg-accent ${shadowStiglitz}`}>
+      <div className="card-back">
         <img src="/presidents/back.png" className="rounded-xl" />
       </div>
       <div className="swap-on">
-        <img
-          src={cardItem.photo}
-          className={`rounded-xl drop-shadow-xl ${matchedClass}`}
-        />
+        <img src={cardItem.photo} className={`card-front ${matchedClass}`} />
       </div>
     </label>
   );

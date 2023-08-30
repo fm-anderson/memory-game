@@ -2,15 +2,15 @@ import LevelButtons from "./LevelButtons";
 
 function Congrats() {
   return (
-    <div className="flex flex-col">
-      <p className="mb-3 text-xl font-semibold">Play Again?</p>
+    <div className="congrats">
+      <h4 className="congrats-title">Play Again?</h4>
 
-      <div className="mb-2 flex justify-center gap-2 md:grid">
+      <div className="congrats-buttons">
         <LevelButtons />
       </div>
       <div>
         <button
-          className="btn bg-base-300 md:w-40"
+          className="congrats-home"
           onClick={() => window.location.reload()}
         >
           <svg
