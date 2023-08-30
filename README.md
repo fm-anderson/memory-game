@@ -14,6 +14,7 @@ This game challenges players to match cards featuring funny U.S. Presidents avat
 
 - Three difficulty levels: easy, medium, and hard.
 - Cards feature U.S. Presidents as Pixar characters.
+- President details are shown after each match.
 - Interactive card flipping animation.
 
 ## Setup & Installation
