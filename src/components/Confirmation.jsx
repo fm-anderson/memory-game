@@ -5,7 +5,7 @@ import {
   matchedAtom,
   turnsAtom,
 } from "../utils/atoms";
-import { capitalizeFirstLetter, shadowStiglitz } from "../utils/helpers";
+import { capitalizeFirstLetter } from "../utils/helpers";
 import { randomCards } from "../utils/game";
 import { presidents } from "../utils/presidents";
 
@@ -39,20 +39,20 @@ function Confirmation({ setPlaying, setCards }) {
   }
 
   return (
-    <dialog id="confirm_modal" className="modal modal-bottom sm:modal-middle">
+    <dialog id="confirm_modal" className="modal-confirm">
       <form method="dialog" className="modal-box">
-        <h3 className="text-2xl font-bold drop-shadow-sm">
+        <h3 className="modal-title">
           You've selected: {capitalizeFirstLetter(level)}
         </h3>
-        <p className="mb-6 py-4 text-xl drop-shadow-sm">Ready to start?</p>
-        <span className="flex justify-center gap-4">
+        <p className="modal-subtitle">Ready to start?</p>
+        <span className="modal-buttons">
           <button
-            className={`btn ${buttonColor} w-24 ${shadowStiglitz}`}
+            className={`shadow-stiglitz btn w-24 ${buttonColor}`}
             onClick={handleStart}
           >
             Start
           </button>
-          <button className={`btn w-24 ${shadowStiglitz}`}>Cancel</button>
+          <button className="modal-cancel">Cancel</button>
         </span>
       </form>
 

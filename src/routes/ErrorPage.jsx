@@ -5,17 +5,17 @@ function Error() {
   const navigate = useNavigate();
 
   return (
-    <div className="hero bg-base-100 min-h-screen bg-gradient-to-r">
-      <div className="hero-content text-center">
+    <div className="error">
+      <div className="error-content">
         <div className="max-w-md">
-          <h1 className="text-3xl font-bold">Uh oh! We've got a problem.</h1>
-          <p className="py-6 text-2xl">
+          <h1 className="error-title">Uh oh! We've got a problem.</h1>
+          <p className="error-message">
             Error: {error.status} {error.message || error.statusText}
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="error-actions">
             <button className="btn" onClick={() => navigate(-1)}>
               <svg
-                className="h-6 w-6 fill-current"
+                className="error-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -25,7 +25,7 @@ function Error() {
             </button>
             <Link to="/" className="btn">
               <svg
-                className="h-6 w-6 fill-current"
+                className="error-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
